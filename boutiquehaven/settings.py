@@ -23,6 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-tz#fm4j0q403@v9vu5pqx#-w8-60_6(a0kgznba@ec&*x9!4ou'
+# stripe
+STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "sk_test_51QQcASRrm86SQNsGRk9E65PVUODIBrai3ninFRBipEGX8gDQQ8hNC3HX8ww1KQA3GOmgfeTHaQ1ZIrvyKIlxzbC900Pdd5ELsy")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -183,5 +186,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Stripe
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
