@@ -26,7 +26,13 @@ SECRET_KEY = 'p@ei#69*b*zz3u4yie-$()@cy^l(+x9&@6ypx+r0lm(3%_9hr7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['app-boutiquehaven.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [
+    'app-boutiquehaven-5e52996b47c2.herokuapp.com',
+    'localhost',
+    '127.0.0.1',
+    'https://app-boutiquehaven-5e52996b47c2.herokuapp.com/'
+]
+
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-boatesj-boutiquehaven-b5gs15j3lbs.ws.codeinstitute-ide.net'
